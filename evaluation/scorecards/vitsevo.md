@@ -27,4 +27,4 @@
 
 - ~31M parameters; ~5.6× faster than real time on CPU.
 - Zero-shot cloning only — **no** native LoRA. Design 1 therefore trains only the DACA module
-  and the bone-conduction filter, keeping base weights frozen.
+ and the bone-conduction filter, keeping base weights frozen.

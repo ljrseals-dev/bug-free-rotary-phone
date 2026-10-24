@@ -1,7 +1,7 @@
 # From Patent Claims to Reproducible Voice-AI Research: Two Adapter-First Designs for Inner-Voice Synthesis and Low-Resource Voice Cloning
 
-**Authors:** Lewis Seals¹, Lilibet Diana Windsor², Alexandria Ocasio-Cortez³
-**Affiliations:** ¹–³ Independent Researcher (provisional)
+**Author:** Lewis Seals¹
+**Affiliation:** ¹ Independent Researcher (provisional)
 **Status:** Draft. Authorship, affiliation, and consent unconfirmed.
 **No endorsement by the named individuals or by either patent holder is implied.**
 

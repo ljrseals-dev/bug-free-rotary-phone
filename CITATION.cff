@@ -3,24 +3,18 @@ message: "Unpublished draft. Authorship provisional and unconfirmed — do not c
 title: "From Patent Claims to Reproducible Voice-AI Research: Two Adapter-First Designs for Inner-Voice Synthesis and Low-Resource Voice Cloning"
 type: software
 authors:
-  - family-names: Seals
-    given-names: Lewis
-    affiliation: "Independent (provisional)"
-  - family-names: Windsor
-    given-names: Lilibet Diana
-    affiliation: "Independent (provisional)"
-  - family-names: Ocasio-Cortez
-    given-names: Alexandria
-    affiliation: "Independent (provisional)"
+ - family-names: Seals
+ given-names: Lewis
+ affiliation: "Independent (provisional)"
 year: 2026
 version: 0.1.0
 license: MIT
 repository-code: "https://github.com/ljrseals-dev/urban-octo-invention"
 keywords:
-  - voice cloning
-  - text-to-speech
-  - inner voice
-  - bone conduction
-  - LoRA
-  - patent analysis
-  - research scaffolding
+ - voice cloning
+ - text-to-speech
+ - inner voice
+ - bone conduction
+ - LoRA
+ - patent analysis
+ - research scaffolding

@@ -10,11 +10,11 @@ protocols folded into evaluation.
 ## 1. Hypotheses
 
 - **H1a (primary).** A TTS model conditioned on demographic vectors and a simulated
-  bone-conduction filter produces higher **Self-Similarity Rating (SSR)** than a strong generic
-  TTS baseline, p < .05 in a mixed-effects model.
+ bone-conduction filter produces higher **Self-Similarity Rating (SSR)** than a strong generic
+ TTS baseline, p < .05 in a mixed-effects model.
 - **H1b (secondary).** The conditioned model is **non-inferior** on naturalness MOS, margin 0.3.
 - **H1c (exploratory).** The SSR gain is larger under an inner-monologue framing than under an
-  external-playback framing.
+ external-playback framing.
 
 ## 2. Construct operationalization
 

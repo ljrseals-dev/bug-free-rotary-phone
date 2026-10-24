@@ -105,7 +105,7 @@ Scores are 1–5. Higher is better for every column, including risk columns, whi
 
 1. Both clear the gate comfortably and score ≥31 total.
 2. They are **methodologically complementary**: one is perceptual (human ratings as the primary
-   outcome), the other is efficiency-oriented (embedding metrics plus compute accounting).
+ outcome), the other is efficiency-oriented (embedding metrics plus compute accounting).
 3. They cover **both anchor patents** without diluting either.
 4. They share infrastructure: one perceptual harness, one embedding harness, one scoring rubric.
 5. They are executable on ≤1 consumer GPU each — no cluster required.
@@ -114,5 +114,5 @@ Scores are 1–5. Higher is better for every column, including risk columns, whi
 
 - **A4, E2** — require new sensor or clinical data collection; out of scope and high ethical load.
 - **B10** — "partially trained" is under-specified in the public record; would need
-  checkpoints we cannot obtain, so B1's LoRA-on-base is the defensible stand-in.
+ checkpoints we cannot obtain, so B1's LoRA-on-base is the defensible stand-in.
 - **C8** — cross-lingual rater effects are a study of listeners, not of voice systems.

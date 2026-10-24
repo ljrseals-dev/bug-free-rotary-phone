@@ -12,7 +12,7 @@
 
 1. **Pin the revision hash** in the config before training. Floating `main` is not acceptable.
 2. **External-comparison-only** models are cited from their published numbers; we do not
-   retrain or release derivatives of them.
+ retrain or release derivatives of them.
 3. **No baked speaker slots** are released from any checkpoint.
 4. A checkpoint enters `configs/` only after its scorecard clears the gate.
 

@@ -4,10 +4,10 @@
 
 Unpublished manuscript format:
 
-Seals, L., Windsor, L. D., & Ocasio-Cortez, A. (2026). From patent claims to reproducible voice-AI research: Two adapter-first designs for inner-voice synthesis and low-resource voice cloning [Unpublished manuscript]. GitHub. https://github.com/ljrseals-dev/urban-octo-invention
+Seals, L. (2026). From patent claims to reproducible voice-AI research: Two adapter-first designs for inner-voice synthesis and low-resource voice cloning [Unpublished manuscript]. GitHub. https://github.com/ljrseals-dev/urban-octo-invention
 
-Parenthetical: (Seals et al., 2026)  
-Narrative: Seals et al. (2026)
+Parenthetical: (Seals, 2026) 
+Narrative: Seals (2026)
 
 Once training and study are complete, change the bracketed description to:
 
@@ -18,7 +18,7 @@ Once training and study are complete, change the bracketed description to:
 
 If the protocol is posted to OSF:
 
-Seals, L., Windsor, L. D., & Ocasio-Cortez, A. (2026). Two adapter-first designs for inner-voice synthesis and low-resource voice cloning [Preregistration]. Open Science Framework. https://osf.io/XXXXX
+Seals, L. (2026). Two adapter-first designs for inner-voice synthesis and low-resource voice cloning [Preregistration]. Open Science Framework. https://osf.io/XXXXX
 
 ## Patent references
 
@@ -36,51 +36,49 @@ OpenAI. (2026). ChatGPT (GPT-4 class version) [Large language model]. https://ch
 
 ```bibtex
 @misc{seals2026patentbenchmark,
-  title        = {From Patent Claims to Reproducible Voice-AI Research:
-                  Two Adapter-First Designs for Inner-Voice Synthesis
-                  and Low-Resource Voice Cloning},
-  author       = {Seals, Lewis and Windsor, Lilibet Diana and
-                  Ocasio-Cortez, Alexandria},
-  year         = {2026},
-  note         = {Unpublished manuscript; authorship and consent pending},
-  howpublished = {GitHub},
-  url          = {https://github.com/ljrseals-dev/urban-octo-invention}
+ title = {From Patent Claims to Reproducible Voice-AI Research:
+ Two Adapter-First Designs for Inner-Voice Synthesis
+ and Low-Resource Voice Cloning},
+ author = {Seals, Lewis},
+ year = {2026},
+ note = {Unpublished manuscript; authorship and consent pending},
+ howpublished = {GitHub},
+ url = {https://github.com/ljrseals-dev/urban-octo-invention}
 }
 
 @misc{seals2026prereg,
-  title        = {Two Adapter-First Designs for Inner-Voice Synthesis
-                  and Low-Resource Voice Cloning},
-  author       = {Seals, Lewis and Windsor, Lilibet Diana and
-                  Ocasio-Cortez, Alexandria},
-  year         = {2026},
-  note         = {Preregistration},
-  howpublished = {Open Science Framework},
-  url          = {https://osf.io/XXXXX}
+ title = {Two Adapter-First Designs for Inner-Voice Synthesis
+ and Low-Resource Voice Cloning},
+ author = {Seals, Lewis},
+ year = {2026},
+ note = {Preregistration},
+ howpublished = {Open Science Framework},
+ url = {https://osf.io/XXXXX}
 }
 
 @misc{randolphventures2026inner,
-  title        = {Personalized Inner Voice Synthesis},
-  author       = {{Randolph Ventures LLC}},
-  year         = {2026},
-  number       = {US12614539B1},
-  type         = {U.S. Patent},
-  institution  = {U.S. Patent and Trademark Office}
+ title = {Personalized Inner Voice Synthesis},
+ author = {{Randolph Ventures LLC}},
+ year = {2026},
+ number = {US12614539B1},
+ type = {U.S. Patent},
+ institution = {U.S. Patent and Trademark Office}
 }
 
 @misc{microsoft2025cloning,
-  title        = {Voice Cloning with Incompletely Trained Text-to-Speech Models},
-  author       = {{Microsoft Technology Licensing LLC}},
-  year         = {2025},
-  number       = {US20250349282A1},
-  type         = {U.S. Patent Application},
-  institution  = {U.S. Patent and Trademark Office}
+ title = {Voice Cloning with Incompletely Trained Text-to-Speech Models},
+ author = {{Microsoft Technology Licensing LLC}},
+ year = {2025},
+ number = {US20250349282A1},
+ type = {U.S. Patent Application},
+ institution = {U.S. Patent and Trademark Office}
 }
 
 @misc{openai2026chatgpt,
-  title        = {ChatGPT},
-  author       = {{OpenAI}},
-  year         = {2026},
-  note         = {GPT-4 class version [Large language model]},
-  url          = {https://chat.openai.com/}
+ title = {ChatGPT},
+ author = {{OpenAI}},
+ year = {2026},
+ note = {GPT-4 class version [Large language model]},
+ url = {https://chat.openai.com/}
 }
 ```

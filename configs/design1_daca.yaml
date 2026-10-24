@@ -2,77 +2,77 @@
 # Reference config. Values are starting points, not tuned results.
 
 run:
-  name: d1_daca_vits_evo
-  seed: 1337
-  output_dir: outputs/d1
-  base_frozen_assert_every_n_steps: 100
+ name: d1_daca_vits_evo
+ seed: 1337
+ output_dir: outputs/d1
+ base_frozen_assert_every_n_steps: 100
 
 base_model:
-  name: "ZDisket/VITS-evo"
-  revision: "PIN_COMMIT_SHA"        # pin before training
-  format: onnx
-  freeze_base: true
-  hidden_size: 192                  # confirm against VITS-evo text encoder
-  n_encoder_layers: 6               # confirm against VITS-evo text encoder
+ name: "ZDisket/VITS-evo"
+ revision: "PIN_COMMIT_SHA" # pin before training
+ format: onnx
+ freeze_base: true
+ hidden_size: 192 # confirm against VITS-evo text encoder
+ n_encoder_layers: 6 # confirm against VITS-evo text encoder
 
 data:
-  corpora:
-    - name: common_voice
-      license: CC0
-      split: train
-    - name: vctk
-      license: CC-BY-4.0
-      split: train
-    - name: libritts_r
-      license: CC-BY-4.0
-      split: dev-clean
-  sample_rate: 22050
-  min_speakers_per_cell: 30
-  age_bands: ["18-34", "35-59"]
-  height_proxy: true
+ corpora:
+ - name: common_voice
+ license: CC0
+ split: train
+ - name: vctk
+ license: CC-BY-4.0
+ split: train
+ - name: libritts_r
+ license: CC-BY-4.0
+ split: dev-clean
+ sample_rate: 22050
+ min_speakers_per_cell: 30
+ age_bands: ["18-34", "35-59"]
+ height_proxy: true
 
 daca:
-  enabled: true
-  age_dim: 8
-  gender_dim: 4
-  dialect_dim: 16
-  vtl_dim: 1
-  hidden_dim: 256
-  n_layers: 2
-  dropout: 0.1
-  condition_dropout: 0.1
-  film: true
-  trainable_params_target: 2_000_000
+ enabled: true
+ age_dim: 8
+ gender_dim: 4
+ dialect_dim: 16
+ vtl_dim: 1
+ hidden_dim: 256
+ n_layers: 2
+ dropout: 0.1
+ condition_dropout: 0.1
+ film: true
+ trainable_params_target: 2_000_000
 
 bone_conduction:
-  enabled: true
-  sample_rate: 22050
-  init_cutoff_hz: 350.0
-  init_gain_db: 6.0
-  init_harmonic_mix: 0.15
-  apply_stage: pre_vocoder
-  differentiable: true
-  validate_against_scipy: true
+ enabled: true
+ sample_rate: 22050
+ init_cutoff_hz: 350.0
+ init_gain_db: 6.0
+ init_harmonic_mix: 0.15
+ apply_stage: pre_vocoder
+ differentiable: true
+ validate_against_scipy: true
 
 training:
-  epochs: 50
-  batch_size: 16
-  lr: 1.0e-4
-  optimizer: adamw
-  loss_weights:
-    mel: 1.0
-    speaker_embed: 0.5
-    filter_reg: 0.01
-  eval_every: 5
+ epochs: 50
+ batch_size: 16
+ lr: 1.0e-4
+ optimizer: adamw
+ loss_weights:
+ mel: 1.0
+ speaker_embed: 0.5
+ filter_reg: 0.01
+ eval_every: 5
 
 evaluation:
-  conditions: [C0_baseline, C1_daca_only, C2_full_model, C3_recorded_anchor]
-  n_participants: 35
-  headphones_only_primary: true
-  scales:
-    ssr: 7
-    mos: 5
-    bcn: 5
-  stimulus_list: evaluation/stimuli/harvard_12.txt
-  analysis: mixed_effects
-  correction: bonferroni
+ conditions: [C0_baseline, C1_daca_only, C2_full_model, C3_recorded_anchor]
+ n_participants: 35
+ headphones_only_primary: true
+ scales:
+ ssr: 7
+ mos: 5
+ bcn: 5
+ stimulus_list: evaluation/stimuli/harvard_12.txt
+ analysis: mixed_effects
+ correction: bonferroni

@@ -26,13 +26,13 @@ can be rejected as not-self or not-trustworthy.
 1. Generate a provisional voice clone from a recording.
 2. Apply a **frequency shift** to compensate for the absent bone-conducted low-frequency adjustment.
 3. Use a trained AI model to predict additional acoustic-parameter adjustments
-   (formant structure, spectral envelope, prosodic patterns), conditioned on:
-   - demographic factors,
-   - anatomical factors,
-   - content factors,
-   - environment factors.
+ (formant structure, spectral envelope, prosodic patterns), conditioned on:
+ - demographic factors,
+ - anatomical factors,
+ - content factors,
+ - environment factors.
 4. **Iteratively refine** the clone using user feedback until it aligns with the speaker's
-   self-perceived inner voice.
+ self-perceived inner voice.
 
 ### What we test vs. what we defer
 
@@ -48,7 +48,7 @@ can be rejected as not-self or not-trustworthy.
 - **H1a:** DACA + bone conduction > baseline on SSR (7-point), p < .05, mixed-effects.
 - **H1b:** Non-inferiority on MOS, margin 0.3.
 - **H1c (exploratory):** Preference gain holds for inner-monologue framing but not for
-  external-playback framing.
+ external-playback framing.
 
 ### Prior-art notes
 
@@ -80,7 +80,7 @@ A zero-shot personalized TTS model with three components:
 1. **Feature extractor** — acoustic and prosodic features from new target reference speech.
 2. **Speaker encoder** — speaker embedding from those acoustic features.
 3. **TTS module** — generates personalized voice from the speaker embedding and prosodic
-   features **without applying the TTS module on new labeled training data**.
+ features **without applying the TTS module on new labeled training data**.
 
 Claimed benefits: reduced training compute and latency; cross-lingual voice cloning; natural
 speech for new speakers without new labeled data.

@@ -18,11 +18,9 @@ open-source-first benchmarks:
 
 No affiliation with, or endorsement by, either patent holder is implied.
 
-## Authors (provisional — consent pending)
+## Author (provisional — consent pending)
 
 - Lewis Seals
-- Lilibet Diana Windsor
-- Alexandria Ocasio-Cortez
 
 ## Research questions
 
@@ -36,28 +34,28 @@ data, approach full fine-tuning in speaker similarity and naturalness at ≤20% 
 ## How this research is different
 
 - **Tests patent claims rather than restating them.** Each claim is converted into a falsifiable
-  hypothesis with preregistered metrics and explicit baselines.
+ hypothesis with preregistered metrics and explicit baselines.
 - **Searches widely before building.** Datasets, checkpoints, and libraries are inventoried and
-  scored on a seven-criterion rubric before implementation begins.
+ scored on a seven-criterion rubric before implementation begins.
 - **Adapts existing models.** Novelty lives in conditioning, adaptation, and evaluation — not in
-  rebuilding a TTS stack from zero.
+ rebuilding a TTS stack from zero.
 - **Dual evaluation.** Human perceptual ratings are paired with speaker-embedding metrics; a low
-  SECS–SMOS correlation is treated as a finding, not hidden.
+ SECS–SMOS correlation is treated as a finding, not hidden.
 - **Ethics as a design constraint.** Written consent, tiered release, and no-release rules for
-  baked speaker identities, aligned with the NO FAKES Act (2026) framework.
+ baked speaker identities, aligned with the NO FAKES Act (2026) framework.
 
 ## Repository layout
 
 ```
 .
-├── docs/                # patent notes, 47-idea bank, rubric, ethics, consent,
-│                        # authorship attestation, citations, execution spec
-├── designs/             # two full research designs
-├── evaluation/          # perceptual protocol, similarity metrics, scorecards
-├── candidate_assets/    # scored datasets, checkpoints, libraries
-├── paper/draft.md       # full manuscript draft + results template
-├── configs/             # runnable YAML configs for both designs
-└── src/                 # reference implementations (completed scaffolding)
+├── docs/ # patent notes, 47-idea bank, rubric, ethics, consent,
+│ # authorship attestation, citations, execution spec
+├── designs/ # two full research designs
+├── evaluation/ # perceptual protocol, similarity metrics, scorecards
+├── candidate_assets/ # scored datasets, checkpoints, libraries
+├── paper/draft.md # full manuscript draft + results template
+├── configs/ # runnable YAML configs for both designs
+└── src/ # reference implementations (completed scaffolding)
 ```
 
 ## Quickstart
@@ -87,7 +85,7 @@ clarity; **≥3** on ethical manageability.
 
 - Voice cloning requires **explicit written consent** and disclosure.
 - **Do not release baked speaker models.** Release adapters, configs, and consented synthetic
-  evaluation audio only.
+ evaluation audio only.
 - Watermark or clearly label all synthetic outputs.
 - Honor withdrawal requests: delete raw audio and derived embeddings within 30 days.
 - Review every dataset, checkpoint, and library license before use.
@@ -104,7 +102,7 @@ clarity; **≥3** on ethical manageability.
 - [x] Authorship attestation workflow (`docs/authorship_attestation.md`)
 - [x] Citation block + BibTeX (`docs/citations.md`)
 - [x] Execution specification for remaining human/GPU steps (`docs/execution_spec.md`)
-- [ ] Author signatures (three human signatures required)
+- [ ] Author signature (one human signature required)
 - [ ] GPU training runs (requires consented data + hardware)
 - [ ] Human perceptual study (requires IRB + participants)
 

@@ -35,7 +35,7 @@ Agreement consent standard.
 | 3 | Tier 2 + adapter release | |
 
 - **Withdrawal:** raw audio and derived embeddings deleted within **30 days**; any trained
-  adapter deleted or retrained without the speaker.
+ adapter deleted or retrained without the speaker.
 
 ---
 
@@ -43,7 +43,7 @@ Agreement consent standard.
 
 - Raw audio stored on encrypted local storage; **never** committed to the repository.
 - Embeddings treated as **sensitive biometric-adjacent data**; not released, not logged in
-  plaintext, deleted on withdrawal.
+ plaintext, deleted on withdrawal.
 - Access limited to named researchers on the project.
 - Retention: raw audio ≤ 24 months from collection; embeddings ≤ duration of the study + 6 months.
 

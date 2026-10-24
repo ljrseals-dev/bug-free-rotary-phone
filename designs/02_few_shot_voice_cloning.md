@@ -10,11 +10,11 @@ folded into evaluation.
 ## 1. Hypotheses
 
 - **H2a (primary).** LoRA fine-tuning with 30 s of target-speaker data achieves
-  **SECS ≥ 0.9 ×** the SECS of full fine-tuning on the same 30 s.
+ **SECS ≥ 0.9 ×** the SECS of full fine-tuning on the same 30 s.
 - **H2b (secondary).** LoRA uses **≤20%** of the GPU-hours and **≤30%** of the trainable
-  parameters of full fine-tuning.
+ parameters of full fine-tuning.
 - **H2c (exploratory).** corr(SECS, SMOS) ≥ 0.6. If not, SECS alone is flagged insufficient
-  for this configuration.
+ for this configuration.
 
 ## 2. Why this is a stricter test than the patent
 
@@ -83,11 +83,11 @@ length with diminishing returns beyond ~20 s. The 10/20/30 s sweep maps our resu
 
 1. Report SECS/SMOS/nMOS with 95% CIs for every condition.
 2. Fit a monotone curve of SECS vs. reference duration (10/20/30 s) and compare slope to the
-   published duration–similarity curve.
+ published duration–similarity curve.
 3. Compute Pearson and Spearman corr(SECS, SMOS) pooled across conditions; report per-condition
-   correlations as well.
+ correlations as well.
 4. If H2c fails (r < 0.6), report that SECS is **not** a sufficient proxy for this configuration
-   and downgrade the primary metric claim accordingly.
+ and downgrade the primary metric claim accordingly.
 
 ## 8. Risks
 

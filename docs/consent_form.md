@@ -50,9 +50,9 @@ You may withdraw at any time, for any reason, with no penalty. On withdrawal:
 ## 7. Risks
 
 - Synthetic speech resembling you could, in principle, be misused. We mitigate by not
-  releasing voice models and by labeling all synthetic audio.
+ releasing voice models and by labeling all synthetic audio.
 - Listening to a synthetic approximation of your own voice may be mildly unsettling.
-  You may stop at any point.
+ You may stop at any point.
 
 ## 8. Benefits
 

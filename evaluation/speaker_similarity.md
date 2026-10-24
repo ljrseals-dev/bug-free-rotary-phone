@@ -5,7 +5,7 @@
 - **Primary encoder:** ECAPA-TDNN speaker verification model.
 - **Replication encoder:** Resemblyzer.
 - **Procedure:** embed reference audio and synthesized audio; compute cosine similarity;
-  average over 12 utterances per condition.
+ average over 12 utterances per condition.
 - **Report:** mean, SD, 95% CI, and per-speaker breakdown.
 
 **Known limitation:** SECS measures similarity to a verification model's notion of speaker
