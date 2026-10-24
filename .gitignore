@@ -1,0 +1,42 @@
+# Data and audio — never commit voice data
+data/
+audio/
+*.wav
+*.flac
+*.mp3
+*.m4a
+
+# Model weights and adapters
+weights/
+checkpoints/
+*.safetensors
+*.ckpt
+*.pt
+*.bin
+*.onnx
+adapters/
+
+# Embeddings and derived identity artifacts
+embeddings/
+*.npy
+*.npz
+
+# Environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+
+# Experiment artifacts
+runs/
+wandb/
+mlruns/
+outputs/
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

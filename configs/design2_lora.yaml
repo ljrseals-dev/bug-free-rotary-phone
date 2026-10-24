@@ -1,0 +1,77 @@
+# Design 2 — Efficient Few-Shot Voice Cloning
+# Reference config. Values are starting points, not tuned results.
+
+run:
+  name: d2_lora_voxcpm15
+  seed: 1337
+  output_dir: outputs/d2
+
+base_model:
+  name: "openbmb/VoxCPM1.5"
+  revision: "PIN_COMMIT_SHA"        # pin before training
+  freeze_base: false                # base frozen by LoRA automatically
+
+data:
+  reference_durations_s: [10, 20, 30]   # primary condition = 30
+  clip_length_s: 10
+  n_clips: 3
+  heldout_eval_s: 10
+  consent_tier_required: 1              # see docs/consent_form.md
+
+lora:
+  enabled: true
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: ["attn.q", "attn.k", "attn.v", "attn.o", "mlp.fc1", "mlp.fc2"]
+
+speaker_conditioning:
+  method: codec_prefix_positional_token
+  embedding_model: ecapa_tdnn
+  bake_embeddings_internally: true      # NEVER released
+  release_baked_artifacts: false
+
+training:
+  epochs: 3
+  batch_size: 16
+  lr: 2.0e-4
+  optimizer: adamw
+  grad_clip: 1.0
+
+conditions:
+  - id: Z0
+    desc: zero-shot, no adaptation
+  - id: L10
+    desc: LoRA, 10s reference
+  - id: L20
+    desc: LoRA, 20s reference
+  - id: L30
+    desc: LoRA, 30s reference (PRIMARY)
+  - id: F30
+    desc: full fine-tune, 30s reference
+
+evaluation:
+  secs:
+    primary_encoder: ecapa_tdnn
+    replication_encoder: resemblyzer
+  mcd: {n_mfcc: 25, dtw: true}
+  f0_rmse: {octave_correction: true}
+  subjective:
+    n_listeners: 20
+    stimuli_per_listener: 40
+    scales: {smos: 5, nmos: 5}
+  efficiency:
+    log_gpu_hours: true
+    log_peak_vram: true
+    log_trainable_params: true
+    log_rtf: true
+
+success_criteria:
+  secs_ratio_vs_full_ft: ">=0.9"
+  gpu_hours_ratio_vs_full_ft: "<=0.2"
+  secs_smos_min_correlation: 0.6
+
+release_policy:
+  release_adapter: "conditional_on_consent_tier_3"
+  release_baked_model: false
+  release_synthetic_eval_audio: "conditional_on_consent_tier_2"
