@@ -50,13 +50,14 @@ data, approach full fine-tuning in speaker similarity and naturalness at ≤20% 
 
 ```
 .
-├── docs/                # patent notes, 47-idea bank, rubric, ethics, consent
+├── docs/                # patent notes, 47-idea bank, rubric, ethics, consent,
+│                        # authorship attestation, citations, execution spec
 ├── designs/             # two full research designs
 ├── evaluation/          # perceptual protocol, similarity metrics, scorecards
 ├── candidate_assets/    # scored datasets, checkpoints, libraries
-├── paper/draft.md       # full manuscript draft
+├── paper/draft.md       # full manuscript draft + results template
 ├── configs/             # runnable YAML configs for both designs
-└── src/                 # reference implementations (untested scaffolding)
+└── src/                 # reference implementations (completed scaffolding)
 ```
 
 ## Quickstart
@@ -96,11 +97,14 @@ clarity; **≥3** on ethical manageability.
 - [x] 47-idea bank and selection rubric
 - [x] Candidate asset scoring (VoxCPM1.5, VITS-evo, mlx-audio-train)
 - [x] Ethics review and consent form drafts
-- [x] Design 1 DACA + bone-conduction implementation (src/, configs/)
-- [x] Design 2 LoRA pipeline on VoxCPM1.5 (native ref_audio path)
-- [x] Perceptual + embedding evaluation instruments (protocol + evaluate_secs.py)
+- [x] Design 1 DACA + bone-conduction implementation (`src/`, `configs/`)
+- [x] Design 2 LoRA pipeline on VoxCPM1.5 (native `ref_audio` path)
+- [x] Perceptual + embedding evaluation instruments (protocol + `evaluate_secs.py`)
 - [x] Results template folded into `paper/draft.md`
-- [ ] Author consent and affiliation confirmation (`docs/authorship_attestation.md`)
+- [x] Authorship attestation workflow (`docs/authorship_attestation.md`)
+- [x] Citation block + BibTeX (`docs/citations.md`)
+- [x] Execution specification for remaining human/GPU steps (`docs/execution_spec.md`)
+- [ ] Author signatures (three human signatures required)
 - [ ] GPU training runs (requires consented data + hardware)
 - [ ] Human perceptual study (requires IRB + participants)
 
