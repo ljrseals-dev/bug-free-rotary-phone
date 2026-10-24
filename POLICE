@@ -1,0 +1,49 @@
+cd /home/claude/book && cat > NOTICE.md <<'EOF'
+# NOTICE
+
+## No political affiliation or endorsement
+
+This repository is an independent research and software project. It is not
+affiliated with, funded by, endorsed by, or connected to:
+
+- any local, state, or national politician or political candidate;
+- any political party, campaign, PAC, or advocacy organization;
+- any government agency, intergovernmental body, or public official;
+- any public figure whose name may appear in project discussions, drafts,
+  issue threads, or commit history.
+
+No public official has been consulted, has contributed, or has consented to
+be associated with this work. Any name of a public figure that appears
+anywhere in this repository's history is not an author, contributor, endorser,
+or affiliate.
+
+## Authorship
+
+Sole author: Lewis Seals Jr (Independent Researcher). See
+`docs/authorship_attestation.md`. Co-authorship is open only to contributors
+who meet ICMJE criteria and provide written consent.
+
+## Names of real people
+
+The project does not use the names, likenesses, or voices of real people as
+research subjects, demo material, or author identities. Voice-cloning
+experiments require documented speaker consent (see `docs/consent_form.md`).
+
+## Political use
+
+This software and research are not intended for political campaigning,
+voter targeting, impersonation of officials, or the synthesis of any real
+person's voice without their written consent. Such use is contrary to the
+project's ethics policy (`docs/ethics_review.md`) and to applicable law,
+including right-of-publicity statutes and the NO FAKES Act framework.
+
+## Reporting
+
+If you believe this repository misuses a name or likeness, open an issue
+titled "NOTICE" or contact the maintainer. Takedown requests will be honored
+within 30 days.
+
+---
+*This NOTICE does not constitute legal advice.*
+EOF
+echo "written: NOTICE.md"
