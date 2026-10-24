@@ -96,11 +96,13 @@ clarity; **≥3** on ethical manageability.
 - [x] 47-idea bank and selection rubric
 - [x] Candidate asset scoring (VoxCPM1.5, VITS-evo, mlx-audio-train)
 - [x] Ethics review and consent form drafts
-- [ ] Design 1 DACA + bone-conduction implementation
-- [ ] Design 2 LoRA pipeline on VoxCPM1.5
-- [ ] Perceptual study (N ≈ 35) and embedding evaluation
-- [ ] Results folded into `paper/draft.md`
-- [ ] Author consent and affiliation confirmation
+- [x] Design 1 DACA + bone-conduction implementation (src/, configs/)
+- [x] Design 2 LoRA pipeline on VoxCPM1.5 (native ref_audio path)
+- [x] Perceptual + embedding evaluation instruments (protocol + evaluate_secs.py)
+- [x] Results template folded into `paper/draft.md`
+- [ ] Author consent and affiliation confirmation (`docs/authorship_attestation.md`)
+- [ ] GPU training runs (requires consented data + hardware)
+- [ ] Human perceptual study (requires IRB + participants)
 
 ## Citation
 

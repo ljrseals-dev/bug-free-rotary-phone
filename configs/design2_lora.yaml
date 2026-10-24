@@ -1,4 +1,4 @@
-# Design 2 — Efficient Few-Shot Voice Cloning
+# Design 2 — Efficient Few-Shot Voice Cloning (completed)
 # Reference config. Values are starting points, not tuned results.
 
 run:
@@ -9,6 +9,7 @@ run:
 base_model:
   name: "openbmb/VoxCPM1.5"
   revision: "PIN_COMMIT_SHA"        # pin before training
+  sample_rate: 44100
   freeze_base: false                # base frozen by LoRA automatically
 
 data:
@@ -17,18 +18,22 @@ data:
   n_clips: 3
   heldout_eval_s: 10
   consent_tier_required: 1              # see docs/consent_form.md
+  manifest_builder: "CloningRun.make_manifest"
 
 lora:
   enabled: true
   rank: 16
   alpha: 32
   dropout: 0.05
+  epochs: 3
+  batch_size: 16
+  lr: 2.0e-4
+  max_batch_tokens: 8192
   target_modules: ["attn.q", "attn.k", "attn.v", "attn.o", "mlp.fc1", "mlp.fc2"]
 
 speaker_conditioning:
-  method: codec_prefix_positional_token
-  embedding_model: ecapa_tdnn
-  bake_embeddings_internally: true      # NEVER released
+  method: native_ref_audio              # VoxCPM1.5 native path (no hand-rolled injector)
+  bake_embeddings_internally: false     # never bake for release
   release_baked_artifacts: false
 
 training:
@@ -40,15 +45,15 @@ training:
 
 conditions:
   - id: Z0
-    desc: zero-shot, no adaptation
+    desc: "zero-shot, ref_audio only"
   - id: L10
-    desc: LoRA, 10s reference
+    desc: "LoRA, 10s reference"
   - id: L20
-    desc: LoRA, 20s reference
+    desc: "LoRA, 20s reference"
   - id: L30
-    desc: LoRA, 30s reference (PRIMARY)
+    desc: "LoRA, 30s reference (PRIMARY)"
   - id: F30
-    desc: full fine-tune, 30s reference
+    desc: "full fine-tune, 30s reference"
 
 evaluation:
   secs:

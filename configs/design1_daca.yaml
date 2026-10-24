@@ -1,16 +1,19 @@
-# Design 1 — Demographic-Aware Inner-Voice Synthesis
+# Design 1 — Demographic-Aware Inner-Voice Synthesis (completed)
 # Reference config. Values are starting points, not tuned results.
 
 run:
   name: d1_daca_vits_evo
   seed: 1337
   output_dir: outputs/d1
+  base_frozen_assert_every_n_steps: 100
 
 base_model:
   name: "ZDisket/VITS-evo"
   revision: "PIN_COMMIT_SHA"        # pin before training
   format: onnx
   freeze_base: true
+  hidden_size: 192                  # confirm against VITS-evo text encoder
+  n_encoder_layers: 6               # confirm against VITS-evo text encoder
 
 data:
   corpora:
@@ -30,30 +33,33 @@ data:
 
 daca:
   enabled: true
-  input_dims:
-    age: 8
-    gender: 4
-    dialect: 16
-    vtl: 1
+  age_dim: 8
+  gender_dim: 4
+  dialect_dim: 16
+  vtl_dim: 1
   hidden_dim: 256
-  layers: 2
+  n_layers: 2
+  dropout: 0.1
+  condition_dropout: 0.1
   film: true
   trainable_params_target: 2_000_000
 
 bone_conduction:
   enabled: true
-  shelf_cutoff_hz: 350       # learned, initialized here
-  shelf_gain_db: 6.0         # learned, initialized here
-  harmonic_mix: 0.15         # learned, initialized here
+  sample_rate: 22050
+  init_cutoff_hz: 350.0
+  init_gain_db: 6.0
+  init_harmonic_mix: 0.15
   apply_stage: pre_vocoder
   differentiable: true
+  validate_against_scipy: true
 
 training:
   epochs: 50
   batch_size: 16
   lr: 1.0e-4
   optimizer: adamw
-  loss:
+  loss_weights:
     mel: 1.0
     speaker_embed: 0.5
     filter_reg: 0.01

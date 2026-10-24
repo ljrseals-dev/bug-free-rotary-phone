@@ -122,6 +122,50 @@ nMOS with ≥20 listeners; GPU-hours, peak VRAM, trainable-parameter count, RTF.
 without labeled data. We test the efficiency frontier of that idea under a realistic low-resource
 budget, and we report the SECS–SMOS correlation that patent language omits.
 
+
+## 4. Results — Design 1 (inner voice)
+
+**Table 1.** Perceptual ratings by condition (mean ± SD, 95% CI in brackets).
+
+| Condition | SSR (7-pt) | MOS (5-pt) | BCN (5-pt) | Pref. vs C0 |
+|---|---|---|---|---|
+| C0 Baseline | __ ± __ [__, __] | __ ± __ | __ ± __ | — |
+| C1 DACA only | __ ± __ [__, __] | __ ± __ | __ ± __ | __% |
+| C2 Full model | __ ± __ [__, __] | __ ± __ | __ ± __ | __% |
+| C3 Recorded anchor | __ ± __ [__, __] | __ ± __ | __ ± __ | — |
+
+Mixed-effects contrasts (Bonferroni-corrected):
+- C2 − C0 on SSR: β = __, 95% CI [__, __], p = __, d = __.
+- Non-inferiority on MOS (margin 0.3): __ (supported / not supported).
+- Per-demographic-group SSR: reported in Appendix D; no group deviates by > __ points.
+
+**H1a** __ ; **H1b** __ ; **H1c** __ .
+
+## 5. Results — Design 2 (few-shot cloning)
+
+**Table 2.** Speaker similarity and efficiency by condition.
+
+| Cond. | Ref. (s) | SECS (ECAPA) | SECS (Resemblyzer) | SMOS | nMOS | GPU-h | Peak VRAM | Trainable % |
+|---|---|---|---|---|---|---|---|---|
+| Z0 | — | __ ± __ | __ ± __ | __ | __ | 0 | __ | 0 |
+| L10 | 10 | __ ± __ | __ ± __ | __ | __ | __ | __ | __ |
+| L20 | 20 | __ ± __ | __ ± __ | __ | __ | __ | __ | __ |
+| **L30** | **30** | **__ ± __** | **__ ± __** | **__** | **__** | **__** | **__** | **__** |
+| F30 | 30 | __ ± __ | __ ± __ | __ | __ | __ | __ | 100 |
+
+**H2a:** SECS(L30) / SECS(F30) = __ (criterion ≥ 0.9: __ ).
+**H2b:** GPU-h(L30) / GPU-h(F30) = __ (criterion ≤ 0.2: __ );
+trainable-parameter ratio = __ (criterion ≤ 0.3: __ ).
+**H2c:** Pearson r(SECS, SMOS) = __, p = __ → __ (SECS sufficient / insufficient alone).
+
+**Figure 1.** SECS vs. reference duration (10/20/30 s) with the published
+diminishing-returns curve overlaid. Slope comparison: __ .
+
+**Figure 2.** SECS–SMOS scatter, coloured by condition, with regression line and
+95% CI band.
+
+---
+
 ## 6. How our research is different
 
 **It tests rather than restates.** Each patent claim becomes a falsifiable hypothesis with a
