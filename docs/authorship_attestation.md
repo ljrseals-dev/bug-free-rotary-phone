@@ -1,84 +1,39 @@
 # Authorship Attestation
 
-**Status:** UNSIGNED. Author line is PROVISIONAL — CONSENT PENDING.
-This file must be completed, signed, and dated by the named author before
-any submission, public release, or repository de-privatization.
+**Manuscript:** From Patent Claims to Reproducible Voice-AI Research: Two
+Adapter-First Designs for Inner-Voice Synthesis and Low-Resource Voice Cloning
+
+**Author:** Lewis Seals Jr
+**Affiliation:** Independent Researcher
 
 ---
 
-## 1. ICMJE authorship criteria
+## 1. ICMJE criteria
+I confirm I meet all four: substantial contribution ☐ · drafting/revising ☐ ·
+final approval ☐ · accountability ☐
 
-The listed author must meet all four ICMJE criteria:
+## 2. CRediT roles claimed
+☐ Conceptualization ☐ Methodology ☐ Software ☐ Investigation ☐ Formal analysis
+☐ Writing — original draft ☐ Writing — review & editing ☐ Project administration
 
-1. Substantial contributions to conception/design, or acquisition/analysis/interpretation of data.
-2. Drafting the work or revising it critically for important intellectual content.
-3. Final approval of the version to be published.
-4. Agreement to be accountable for all aspects of the work.
+## 3. Co-authorship status
+Sole author. No co-author is listed. Any future co-author must meet all four
+ICMJE criteria and provide written consent before being added. Contributors who
+do not meet all four criteria will be named in Acknowledgements with permission.
 
----
+## 4. Generative AI disclosure
+An AI assistant was used for literature search, drafting scaffolding documents,
+and proposing candidate implementations. All substantive research decisions,
+ethical judgments, and authorship attestations are mine. Disclosed in the paper
+and cited per APA 7th edition. ☐ Confirmed accurate.
 
-## 2. Per-author attestation
+## 5. Dedication
+*Soli Deo Gloria.*
 
-| Item | Lewis Seals |
-|---|---|
-| Confirms sole authorship (ICMJE 1–4) | ☐ |
-| Confirms affiliation as stated | ☐ |
-| Approves the manuscript text | ☐ |
-| Consents to name in CITATION.cff | ☐ |
-| Has reviewed the ethics dossier | ☐ |
-| Date | |
-| Signature / written confirmation | |
+## 6. Signature
+I attest the statements above are true and I approve this manuscript.
 
-**Until the boxes above are checked, the following remain in force:**
-- `CITATION.cff` keeps `message: "Unpublished draft. Authorship provisional."`
-- `paper/draft.md` keeps the "Status: Draft. Authorship unconfirmed." banner.
-- The repository remains private.
+**Signature:** ______________________________________
 
----
-
-## 3. CRediT contributor roles statement
-
-| CRediT role | Lewis Seals |
-|---|---|
-| Conceptualization | ☐ |
-| Data curation | ☐ |
-| Formal analysis | ☐ |
-| Funding acquisition | ☐ |
-| Investigation | ☐ |
-| Methodology | ☐ |
-| Project administration | ☐ |
-| Resources | ☐ |
-| Software | ☐ |
-| Supervision | ☐ |
-| Validation | ☐ |
-| Visualization | ☐ |
-| Writing — original draft | ☐ |
-| Writing — review & editing | ☐ |
-
-**Rendered statement format (fill in and sign):**
-
-> **Author contributions:** Lewis Seals: Conceptualization, Methodology, Software, Investigation, Writing — original draft, Writing — review & editing.
-
----
-
-## 4. Use of generative AI — disclosure
-
-> **Disclosure of generative AI use.** An AI assistant was used to search
-> literature, draft scaffolding documents, and propose candidate implementations.
-> All substantive research decisions, ethical judgments, and authorship
-> attestations were made by the human author. The AI system is cited in the
-> references per APA 7th edition guidance.
-
----
-
-## 5. Corresponding author designation
-
-**Corresponding author:** Lewis Seals (signature required)
-
----
-
-## 6. Sign-off
-
-| Role | Name | Date | Signature |
-|---|---|---|---|
-| Sole author | Lewis Seals | | |
+**Printed name:** Lewis Seals Jr
+**Date:** ____________________

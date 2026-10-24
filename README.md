@@ -20,7 +20,9 @@ No affiliation with, or endorsement by, either patent holder is implied.
 
 ## Author (provisional — consent pending)
 
-- Lewis Seals
+- Lewis Seals Jr
+
+**Dedication:** *Soli Deo Gloria.*
 
 ## Research questions
 
@@ -102,7 +104,7 @@ clarity; **≥3** on ethical manageability.
 - [x] Authorship attestation workflow (`docs/authorship_attestation.md`)
 - [x] Citation block + BibTeX (`docs/citations.md`)
 - [x] Execution specification for remaining human/GPU steps (`docs/execution_spec.md`)
-- [ ] Author signature (one human signature required)
+- [ ] Author signature (`docs/authorship_attestation.md` §6 — one signature required)
 - [ ] GPU training runs (requires consented data + hardware)
 - [ ] Human perceptual study (requires IRB + participants)
 
